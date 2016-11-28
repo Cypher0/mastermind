@@ -9,7 +9,7 @@ class Game
 	def begin
 		puts "Welcome to Mastermind!"
 		@cpu.generate_code
-		puts "The secret code is a 4-digit number containing numbers from 1 to 6."
+		puts "The secret code is a 4-digit number containing digits from 1 to 6."
 		puts "The computer will give you feedback on your guess:"
 		puts "'!' means a correct number in the correct position."
 		puts "'?' means a correct number, but in the wrong position."
