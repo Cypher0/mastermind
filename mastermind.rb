@@ -18,7 +18,6 @@ class Game
     end
   end
 
-<<<<<<< HEAD
   def begin
     setup_players
     @maker.generate_code
@@ -29,33 +28,6 @@ class Game
     end
     finish_game
   end
-=======
-	def begin
-		puts "Welcome to Mastermind!"
-		@cpu.generate_code
-		puts "The secret code is a 4-digit number containing digits from 1 to 6."
-		puts "The computer will give you feedback on your guess:"
-		puts "'!' means a correct number in the correct position."
-		puts "'?' means a correct number, but in the wrong position."
-		puts "'0' means that this number is not in the code."
-		until @number_of_turns == 12 || @human.guess == @cpu.code do
-			@human.try_to_guess
-			if @human.guess.length == 4
-				@cpu.give_feedback(@human.guess)
-				@number_of_turns += 1
-			else
-				puts "Make sure your guess has 4 digits!"
-				redo
-			end
-		end
-		if @human.guess == @cpu.code
-			puts "Congratulations, you guessed the secret code with #{@number_of_turns} turns!"
-		else
-			puts "Sorry, you failed to guess the secret code."
-			puts "The correct answer was #{@cpu.code}."
-		end
-	end
->>>>>>> c956ea7c72f2fb074accd57b74f9d0208009214c
 
   def finish_game
     if @breaker.guess == @maker.code
@@ -172,9 +144,4 @@ class Human
   end
 end
 
-<<<<<<< HEAD
 Game.new.begin
-=======
-game = Game.new
-game.begin
->>>>>>> c956ea7c72f2fb074accd57b74f9d0208009214c
