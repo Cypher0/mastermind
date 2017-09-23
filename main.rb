@@ -1,5 +1,3 @@
-require 'sinatra'
-require 'sinatra-contrib'
 require_relative 'lib/human.rb'
 require_relative 'lib/computer.rb'
 

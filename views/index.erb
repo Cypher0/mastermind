@@ -1,6 +1,31 @@
 <html>
   <head>
+    <title>Mastermind by Cypher</title>
+    <style>
+      table { border-spacing: 12px; }
+      td { font-size: 18px;
+           font-weight: bold; }
+    </style>
   </head>
   <body>
+  <h1>Mastermind</h1>
+  <p>Mastermind is a game where you try to break a computer-generated code in 12 or less turns.
+  <p>Good luck!</p>
+  <a href='/rules'>View Rules</a>
+  <p>Enter the code(4 numbers between 1 and 6):</p>
+  <form method='post' action='/'>
+    <input type='text' name='guess' required='required' pattern=".{4,4}" />
+    <input type='submit' value='Guess!' />
+  </form>
+  <p><%= message %></p>
+  <p>Your guesses so far:</p>
+  <table>
+    <% guesses.each_with_index do |guess, i| %>
+      <tr>
+        <td><%= "#{guess}" %></td>
+        <td><%= "#{feedbacks[i]}" %></td>
+      </tr>
+    <% end %>
+  </table>
   </body>
 </html>
