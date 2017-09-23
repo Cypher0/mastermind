@@ -1,2 +1,2 @@
-require './main'
+require './mastermind'
 run Sinatra::Application
